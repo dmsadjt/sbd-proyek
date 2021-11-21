@@ -23,12 +23,12 @@
                         <a class="btn btn-primary" href="/anggota/index">
                             Anggota
                         </a>
-                        <div class="btn btn-primary">
+                        <a class="btn btn-primary" href="/kegiatan/index">
                             Proker dan Agenda
-                        </div>
-                        <div class="btn btn-primary">
+                        </a>
+                        <a class="btn btn-primary" href="">
                             Jadwal Kesibukan
-                        </div>
+                        </a>
                     </div>
 
                 </div>
