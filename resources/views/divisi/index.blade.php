@@ -28,8 +28,8 @@
                                 <td>{{$d->noDivisi}}</td>
                                 <td>{{$d->namaDivisi}}</td>
                                 <td>{{$d->kepalaDivisi}}</td>
-                                <td><a href="/divisi/edit/{{$d->id}}">Update</a></td>
-                                <td><a href="/divisi/delete/{{$d->id}}">Hapus</a></td>
+                                <td><a href="/divisi/edit/{{$d->noDivisi}}">Update</a></td>
+                                <td><a href="/divisi/delete/{{$d->noDivisi}}">Hapus</a></td>
                               </tr>
                             @endforeach
                         </tbody>
