@@ -9,12 +9,10 @@
                 <div class="card-body">
                     <form method="POST" action="/divisi/update">
                         @csrf
-                        <input type="hidden" name="id" value="{{$divisi->id}}">
                         <div class="form-group row">
-                            <label for="noDivisi" class="col-md-4 col-form-label text-md-right">Nomor Divisi</label>
 
                             <div class="col-md-6">
-                                <input id="noDivisi" type="text"
+                                <input id="noDivisi" type="hidden"
                                 class="form-control @error('noDivisi') is-invalid @enderror"
                                 name="noDivisi"
                                 required autocomplete="noDivisi" autofocus
