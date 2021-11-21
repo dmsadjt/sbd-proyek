@@ -20,9 +20,9 @@
                         <a class="btn btn-primary" href="/divisi/index">
                             Divisi
                         </a>
-                        <div class="btn btn-primary">
+                        <a class="btn btn-primary" href="/anggota/index">
                             Anggota
-                        </div>
+                        </a>
                         <div class="btn btn-primary">
                             Proker dan Agenda
                         </div>
