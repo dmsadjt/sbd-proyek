@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+//Divisi
 Route::get('/divisi/index', 'DivisiController@index');
 Route::get('/divisi/add', 'DivisiController@addNew');
 Route::post('/divisi/store', 'DivisiController@store');
@@ -26,3 +28,18 @@ Route::get('/divisi/edit/{id}', 'DivisiController@edit');
 Route::post('/divisi/update', 'DivisiController@update');
 Route::get('/divisi/delete/{id}', 'DivisiController@delete');
 
+//Anggota
+Route::get('/anggota/index', 'AnggotaController@index');
+Route::get('/anggota/add', 'AnggotaController@addNew');
+Route::post('/anggota/store', 'AnggotaController@store');
+Route::get('/anggota/edit/{id}', 'AnggotaController@edit');
+Route::post('/anggota/update', 'AnggotaController@update');
+Route::get('/anggota/delete/{id}', 'AnggotaController@delete');
+
+//Proker dan Agenda
+Route::get('/kegiatan/index', 'KegiatanController@index');
+Route::get('/kegiatan/add', 'KegiatanController@addNew');
+Route::post('/kegiatan/store', 'KegiatanController@store');
+Route::get('/kegiatan/edit/{id}', 'KegiatanController@edit');
+Route::post('/kegiatan/update', 'KegiatanController@update');
+Route::get('/kegiatan/delete/{id}', 'KegiatanController@delete');
