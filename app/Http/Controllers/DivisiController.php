@@ -31,16 +31,16 @@ class DivisiController extends Controller
         } else return redirect('/login');
     }
 
-    public function edit($id)
+    public function edit($noDivisi)
     {
-        $divisi = DB::table('divisis')->where('id', $id)->first();
+        $divisi = DB::table('divisis')->where('noDivisi', $noDivisi)->first();
         return view('divisi.edit', ['divisi' => $divisi]);
     }
 
     public function update(Request $request)
     {
         if (auth()->user()) {
-            DB::table('divisis')->where('id', $request->id)->update([
+            DB::table('divisis')->where('noDivisi', $request->noDivisi)->update([
                 'noDivisi' => $request->noDivisi,
                 'namaDivisi' => $request->namaDivisi,
                 'kepalaDivisi' => $request->kepalaDivisi,
@@ -50,10 +50,10 @@ class DivisiController extends Controller
         } else return redirect('/login');
     }
 
-    public function delete($id)
+    public function delete($noDivisi)
     {
         if (auth()->user()) {
-            DB::table('divisis')->where('id', $id)->delete();
+            DB::table('divisis')->where('noDivisi', $noDivisi)->delete();
             return redirect('divisi/index');
         }
         else return redirect('/login');
