@@ -18,7 +18,7 @@
                                 <input id="noDivisi" type="text"
                                 class="form-control @error('noDivisi') is-invalid @enderror"
                                 name="noDivisi" value="{{ old('noDivisi') }}"
-                                required autocomplete="noDivisi" autofocus>
+                                autocomplete="noDivisi" autofocus>
 
                                 @error('noDivisi')
                                     <span class="invalid-feedback" role="alert">
@@ -35,7 +35,7 @@
                                 <input id="namaDivisi" type="text"
                                 class="form-control @error('namaDivisi') is-invalid @enderror"
                                 name="namaDivisi" value="{{ old('namaDivisi') }}"
-                                required autocomplete="namaDivisi">
+                                autocomplete="namaDivisi">
 
                                 @error('namaDivisi')
                                     <span class="invalid-feedback" role="alert">
@@ -51,7 +51,7 @@
                             <div class="col-md-6">
                                 <input id="kepalaDivisi" type="text"
                                 class="form-control @error('kepalaDivisi') is-invalid @enderror"
-                                name="kepalaDivisi" required autocomplete="new-kepalaDivisi">
+                                name="kepalaDivisi" autocomplete="new-kepalaDivisi">
 
                                 @error('kepalaDivisi')
                                     <span class="invalid-feedback" role="alert">
