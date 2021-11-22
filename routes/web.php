@@ -43,3 +43,11 @@ Route::post('/kegiatan/store', 'KegiatanController@store');
 Route::get('/kegiatan/edit/{id}', 'KegiatanController@edit');
 Route::post('/kegiatan/update', 'KegiatanController@update');
 Route::get('/kegiatan/delete/{id}', 'KegiatanController@delete');
+
+//Proker dan Agenda
+Route::get('/jadwal/index', 'JadwalController@index');
+Route::get('/jadwal/add', 'JadwalController@addNew');
+Route::post('/jadwal/store', 'JadwalController@store');
+Route::get('/jadwal/edit/{id}', 'JadwalController@edit');
+Route::post('/jadwal/update', 'JadwalController@update');
+Route::get('/jadwal/delete/{id}', 'JadwalController@delete');
