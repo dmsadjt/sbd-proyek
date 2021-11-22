@@ -26,7 +26,7 @@
                         <a class="btn btn-primary" href="/kegiatan/index">
                             Proker dan Agenda
                         </a>
-                        <a class="btn btn-primary" href="">
+                        <a class="btn btn-primary" href="/jadwal/index">
                             Jadwal Kesibukan
                         </a>
                     </div>
