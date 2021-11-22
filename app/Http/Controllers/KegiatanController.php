@@ -19,42 +19,46 @@ class KegiatanController extends Controller
     public function store()
     {
         $data = request()->validate([
-            'noDivisi' => 'required',
-            'namaDivisi' => 'required',
-            'kepalaDivisi' => 'required'
+            'noKegiatan' => 'required',
+            'judulKegiatan' => 'required',
+            'jenisKegiatan' => 'required',
+            'jadwalKegiatan' => 'required',
+            'tuk' => 'required',
+            'divisi_id' => 'required',
         ]);
 
         if (auth()->user()) {
-            DB::table('divisis')->insert($data);
-            return redirect('divisi/index');
+            DB::table('kegiatans')->insert($data);
+            return redirect('kegiatan/index');
         } else return redirect('/login');
     }
 
-    public function edit($noDivisi)
+    public function edit($noKegiatan)
     {
-        $divisi = DB::table('divisis')->where('noDivisi', $noDivisi)->first();
-        return view('divisi.edit', ['divisi' => $divisi]);
+        $kegiatan = DB::table('kegiatans')->where('noKegiatan', $noKegiatan)->first();
+        return view('kegiatan.edit', ['kegiatan' => $kegiatan]);
     }
 
     public function update(Request $request)
     {
         if (auth()->user()) {
-            DB::table('divisis')->where('noDivisi', $request->noDivisi)->update([
-                'noDivisi' => $request->noDivisi,
-                'namaDivisi' => $request->namaDivisi,
-                'kepalaDivisi' => $request->kepalaDivisi,
+            DB::table('kegiatans')->where('noKegiatan', $request->noKegiatan)->update([
+                'judulKegiatan' => $request->judulKegiatan,
+                'jenisKegiatan' => $request->jenisKegiatan,
+                'jadwalKegiatan' => $request->jadwalKegiatan,
+                'tuk' => $request->tuk,
+                'divisi_id' => $request->divisi_id,
             ]);
 
-            return redirect('/divisi/index');
+            return redirect('/kegiatan/index');
         } else return redirect('/login');
     }
 
-    public function delete($noDivisi)
+    public function delete($noKegiatan)
     {
         if (auth()->user()) {
-            DB::table('divisis')->where('noDivisi', $noDivisi)->delete();
-            return redirect('divisi/index');
-        }
-        else return redirect('/login');
+            DB::table('kegiatans')->where('noKegiatan', $noKegiatan)->delete();
+            return redirect('kegiatan/index');
+        } else return redirect('/login');
     }
 }
