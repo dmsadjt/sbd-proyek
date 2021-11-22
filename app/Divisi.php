@@ -16,4 +16,7 @@ class Divisi extends Model
     public function kegiatans(){
         return $this->hasMany(Kegiatan::class);
     }
+    public function jadwal(){
+        return $this->hasOne(Jadwal::class);
+    }
 }
