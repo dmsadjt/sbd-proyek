@@ -55,7 +55,6 @@ class AnggotaController extends Controller
                 'alamat' => $request->alamat,
                 'noHP' => $request->noHP,
                 'divisi_id' => $request->divisi_id,
-
             ]);
 
             return redirect('/anggota/index');
