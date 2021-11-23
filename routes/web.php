@@ -17,7 +17,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/role', 'HomeController@index');
+Route::get('/home/ksb', 'HomeController@ksb');
+Route::get('/home/kadiv', 'HomeController@kadiv');
+Route::get('/home/anggota', 'HomeController@anggota');
 
 
 //Divisi
