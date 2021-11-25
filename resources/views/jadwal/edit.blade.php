@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Tambah Divisi</div>
+                <div class="card-header">Edit Jadwal</div>
                 <div class="card-body">
                     <form method="post" action="/jadwal/update">
                         @csrf
