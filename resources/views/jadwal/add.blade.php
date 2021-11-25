@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col">
             <div class="card">
-                <div class="card-header">Tambah Kegiatan</div>
+                <div class="card-header">Tambah Jadwal</div>
 
                 <div class="card-body">
                     <form method="post" action="/jadwal/store">
