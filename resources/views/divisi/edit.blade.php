@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Tambah Divisi</div>
+                <div class="card-header">Edit Divisi</div>
                 <div class="card-body">
                     <form method="POST" action="/divisi/update">
                         @csrf
