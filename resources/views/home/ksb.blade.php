@@ -98,7 +98,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <table class="table table-bordered table-responsive-md ">
+                            <table class="table table-bordered table-responsive-sm">
                                 <thead>
                                   <tr>
                                     <th scope="col">NRP</th>
