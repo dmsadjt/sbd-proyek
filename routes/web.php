@@ -11,16 +11,30 @@
 |
 */
 
+Route::get('/home/ksb', function () {
+    return view('role', ['user'=>auth()->user()]);
+})->middleware('ksb');
+
+Route::get('/home/kadiv', function () {
+    return view('role', ['user'=>auth()->user()]);
+})->middleware('kadiv');
+
+Route::get('/home/anggota', function () {
+    return view('role', ['user'=>auth()->user()]);
+})->middleware('anggota');
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Auth::routes();
 
-Route::get('/role', 'HomeController@index');
-Route::get('/home/ksb', 'HomeController@ksb');
-Route::get('/home/kadiv', 'HomeController@kadiv');
-Route::get('/home/anggota', 'HomeController@anggota');
+Route::get('/home', 'HomeController@index');
+// Route::get('/home/ksb', 'HomeController@ksb');
+// Route::get('/home/kadiv', 'HomeController@kadiv');
+// Route::get('/home/anggota', 'HomeController@anggota');
 
 
 //Divisi
@@ -47,7 +61,7 @@ Route::get('/kegiatan/edit/{id}', 'KegiatanController@edit');
 Route::post('/kegiatan/update', 'KegiatanController@update');
 Route::get('/kegiatan/delete/{id}', 'KegiatanController@delete');
 
-//Proker dan Agenda
+//Jadwal Kesibukan
 Route::get('/jadwal/index', 'JadwalController@index');
 Route::get('/jadwal/add', 'JadwalController@addNew');
 Route::post('/jadwal/store', 'JadwalController@store');
