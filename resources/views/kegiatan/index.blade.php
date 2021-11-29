@@ -15,7 +15,22 @@
                         </div>
                     @endif
 
-                    <table class="table">
+                    <a href="/home">Kembali ke Dashboard</a>
+
+                    <input id="myInput" type="text" placeholder="Search.." class="form-control">
+
+                    <script>
+                        $(document).ready(function () {
+                            $("#myInput").on("keyup", function () {
+                                var value = $(this).val().toLowerCase();
+                                $("#myTable tr").filter(function () {
+                                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                });
+                            });
+                        });
+                    </script>
+
+                    <table class="table" id="myTable">
                         <thead>
                           <tr>
                             <th scope="col">Nomor Kegiatan</th>
