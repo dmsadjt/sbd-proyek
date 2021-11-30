@@ -96,8 +96,9 @@
                                   </table>
                             </div>
                         </div>
+
                         <div class="row">
-                            <table class="table table-bordered table-responsive-md ">
+                            <table class="table table-bordered table-responsive-md anggota">
                                 <thead>
                                   <tr>
                                     <th scope="col">Nama Depan</th>
