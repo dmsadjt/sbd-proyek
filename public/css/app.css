@@ -64,6 +64,20 @@ section {
   display: block;
 }
 
+.th.fixed{
+    top: 0;
+    z-index: 2;
+    position: sticky;
+    background-color: rgba(207, 207, 207, 0.849);
+
+}
+
+table.anggota{
+    overflow-y:scroll;
+    height:500px;
+    display:block;
+  }
+
 body {
   margin: 0;
   font-family: "Nunito", sans-serif;
@@ -10960,5 +10974,7 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+
+
 }
 
