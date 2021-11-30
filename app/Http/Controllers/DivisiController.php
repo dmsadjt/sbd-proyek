@@ -39,6 +39,12 @@ class DivisiController extends Controller
 
     public function update(Request $request)
     {
+        $request->validate([
+            'noDivisi' => 'required',
+            'namaDivisi' => 'required',
+            'kepalaDivisi' => 'required'
+        ]
+        );
         if (auth()->user()) {
             DB::table('divisis')->where('noDivisi', $request->noDivisi)->update([
                 'noDivisi' => $request->noDivisi,
