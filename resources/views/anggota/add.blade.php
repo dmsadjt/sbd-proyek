@@ -51,7 +51,7 @@
                             <div class="col-md-6">
                                 <input id="namaBelakang" type="text"
                                 class="form-control @error('namaBelakang') is-invalid @enderror"
-                                name="namaBelakang" required autocomplete="new-namaBelakang">
+                                name="namaBelakang" autocomplete="new-namaBelakang">
 
                                 @error('namaBelakang')
                                     <span class="invalid-feedback" role="alert">
@@ -94,10 +94,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="ttl" class="col-md-4 col-form-label text-md-right">Tempat, Tanggal Lahir</label>
+                            <label for="ttl" class="col-md-4 col-form-label text-md-right">Tanggal Lahir</label>
 
                             <div class="col-md-6">
-                                <input id="ttl" type="text"
+                                <input id="ttl" type="date"
                                 class="form-control @error('ttl') is-invalid @enderror"
                                 name="ttl" autocomplete="new-ttl">
 
