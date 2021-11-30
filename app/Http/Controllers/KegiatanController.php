@@ -41,6 +41,15 @@ class KegiatanController extends Controller
 
     public function update(Request $request)
     {
+        request()->validate([
+            'noKegiatan' => 'required',
+            'judulKegiatan' => 'required',
+            'jenisKegiatan' => 'required',
+            'jadwalKegiatan' => 'required',
+            'tuk' => 'required',
+            'divisi_id' => 'required',
+        ]);
+
         if (auth()->user()) {
             DB::table('kegiatans')->where('noKegiatan', $request->noKegiatan)->update([
                 'judulKegiatan' => $request->judulKegiatan,
