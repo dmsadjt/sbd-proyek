@@ -21,7 +21,7 @@ class AnggotaController extends Controller
         $data = request()->validate([
             'NRP' => 'required',
             'namaDepan' => 'required',
-            'namaBelakang' => 'required',
+            'namaBelakang' => '',
             'namaPanggilan' => 'required',
             'asalJurusan' => 'required',
             'ttl' => 'required',
