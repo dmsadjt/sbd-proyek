@@ -53,7 +53,7 @@
                         <div class="row">
                             <div class="col-4">
 
-                                <table class="table table-bordered">
+                                <table class="table table-bordered divisi">
                                     <thead>
                                       <tr>
                                         <th scope="col">noDivisi</th>
@@ -75,7 +75,7 @@
                             </div>
 
                             <div class="col">
-                                <table class="table table-bordered">
+                                <table class="table table-bordered kegiatan">
                                     <thead>
                                       <tr>
                                         <th scope="col">Nomor Kegiatan</th>
@@ -98,40 +98,41 @@
                             </div>
                         </div>
                         <div class="row">
-                            <table class="table table-bordered table-responsive-sm">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">NRP</th>
-                                    <th scope="col">Nama Depan</th>
-                                    <th scope="col">Nama Belakang</th>
-                                    <th scope="col">Nama Panggilan</th>
-                                    <th scope="col">Asal Jurusan</th>
-                                    <th scope="col">Tempat, Tanggal Lahir</th>
-                                    <th scope="col">Alamat</th>
-                                    <th scope="col">Nomor HP</th>
-                                    <th scope="col">Nomor Divisi</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($anggota as $a)
-                                    <tr>
-                                        <td>{{$a->NRP}}</td>
-                                        <td>{{$a->namaDepan}}</td>
-                                        <td>{{$a->namaBelakang}}</td>
-                                        <td>{{$a->namaPanggilan}}</td>
-                                        <td>{{$a->asalJurusan}}</td>
-                                        <td>{{$a->ttl}}</td>
-                                        <td>{{$a->alamat}}</td>
-                                        <td>{{$a->noHP}}</td>
-                                        <td>{{$a->divisi_id}}</td>
+                                <table class="table table-bordered table-responsive-sm anggota">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">NRP</th>
+                                        <th scope="col">Nama Depan</th>
+                                        <th scope="col">Nama Belakang</th>
+                                        <th scope="col">Nama Panggilan</th>
+                                        <th scope="col">Asal Jurusan</th>
+                                        <th scope="col">Tempat, Tanggal Lahir</th>
+                                        <th scope="col">Alamat</th>
+                                        <th scope="col">Nomor HP</th>
+                                        <th scope="col">Nomor Divisi</th>
                                       </tr>
-                                    @endforeach
-                                </tbody>
-                              </table>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($anggota as $a)
+                                        <tr>
+                                            <td>{{$a->NRP}}</td>
+                                            <td>{{$a->namaDepan}}</td>
+                                            <td>{{$a->namaBelakang}}</td>
+                                            <td>{{$a->namaPanggilan}}</td>
+                                            <td>{{$a->asalJurusan}}</td>
+                                            <td>{{$a->ttl}}</td>
+                                            <td>{{$a->alamat}}</td>
+                                            <td>{{$a->noHP}}</td>
+                                            <td>{{$a->divisi_id}}</td>
+                                          </tr>
+                                        @endforeach
+                                    </tbody>
+                                  </table>
+
                         </div>
 
                         <div class="row">
-                            <table class="table">
+                            <table class="table jadwal">
                                 <thead>
                                   <tr>
                                     <th scope="col">Nomor Divisi</th>
