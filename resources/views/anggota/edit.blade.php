@@ -98,7 +98,7 @@
                             <label for="ttl" class="col-md-4 col-form-label text-md-right">Tempat, Tanggal Lahir</label>
 
                             <div class="col-md-6">
-                                <input id="ttl" type="text"
+                                <input id="ttl" type="date"
                                 class="form-control @error('ttl') is-invalid @enderror"
                                 name="ttl" value="{{ $anggota->ttl }}"
                                 autocomplete="new-ttl">
